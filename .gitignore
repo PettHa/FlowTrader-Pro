@@ -91,3 +91,4 @@ Thumbs.db
 # Andre prosjektspesifikke filer
 prosjekt_innhold.txt
 builder.py
+todo.md

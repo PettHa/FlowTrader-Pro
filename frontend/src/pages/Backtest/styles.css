@@ -1,0 +1,20 @@
+.backtest-content-wrapper { display: flex; gap: 1.5rem; align-items: flex-start; }
+.backtest-sidebar { width: 350px; flex-shrink: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+.backtest-panel-container
+.backtest-results-container { flex: 1; min-width: 0; position: relative; }
+.results-history { background-color: white; border: 1px solid var(--gray-200); border-radius: 0.5rem; padding: 1rem; box-shadow: var(--shadow-sm); }
+.results-history h3 { font-size: 1rem; font-weight: 600; margin: 0 0 1rem 0; }
+.results-list { max-height: 300px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem; }
+.result-item { padding: 0.75rem; border: 1px solid var(--gray-200); border-radius: 0.375rem; cursor: pointer; transition: all 0.2s ease; }
+.result-item:hover { background-color: var(--gray-50); }
+.result-item.active { border-color: var(--primary-color); background-color: rgba(59, 130, 246, 0.05); }
+.result-date { font-size: 0.7rem; color: var(--gray-500); margin-bottom: 0.25rem; }
+.result-market { font-size: 0.75rem; font-weight: 500; color: var(--gray-700); margin-bottom: 0.25rem; }
+.result-summary { display: flex; justify-content: space-between; font-size: 0.75rem; }
+.result-summary .profit { color: var(--success-color); }
+.result-summary .loss { color: var(--danger-color); }
+.loading-overlay { position: absolute; inset: 0; background: rgba(255, 255, 255, 0.8); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; z-index: 10; border-radius: 0.5rem; }
+.no-results-placeholder { display: flex; align-items: center; justify-content: center; min-height: 300px; text-align: center; color: var(--gray-500); padding: 2rem; background-color: var(--gray-50); border-radius: 0.5rem; border: 1px dashed var(--gray-300);}
+.alert.backtest-run-error { margin: 0 0 1.5rem 0; } 
+.text-green { color: var(--success-color); }
+.text-red { color: var(--danger-color); }

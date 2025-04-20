@@ -104,3 +104,79 @@
   .error-container {
     color: var(--danger-color);
   }
+
+  .strategy-name-input-container {
+    flex-grow: 1;
+    margin: 0 1.5rem; /* Juster margin etter behov */
+    display: flex;
+    justify-content: center; /* Sentrer input hvis ønskelig */
+  }
+  
+  .strategy-name-input {
+    font-size: 1.1rem; /* Litt mindre enn page-title */
+    font-weight: 600;
+    color: var(--gray-800);
+    border: 1px solid transparent; /* Skjul kantlinje til vanlig */
+    border-radius: 0.375rem;
+    padding: 0.3rem 0.6rem;
+    text-align: center; /* Sentrer tekst hvis ønskelig */
+    transition: border-color 0.2s ease;
+    min-width: 200px; /* Sørg for litt bredde */
+    max-width: 400px; /* Begrens maks bredde */
+  }
+  
+  .strategy-name-input:not(:disabled):hover,
+  .strategy-name-input:focus {
+    border-color: var(--gray-300); /* Vis kantlinje ved hover/fokus */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1); /* Lett highlight ved fokus */
+  }
+  
+  .strategy-description-input-container {
+    padding: 0 1.5rem 1rem 1.5rem; /* Plassering under header */
+    margin-top: -0.5rem; /* Litt overlapp om ønskelig */
+  }
+  
+  .strategy-description-input {
+    width: 100%;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    border: 1px solid var(--gray-200);
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .strategy-description-input:focus {
+     outline: none;
+     border-color: var(--primary-color);
+     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  }
+  
+  .alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  .alert.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: var(--danger-color);
+  }
+  
+  .loading-container,
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    gap: 1rem;
+    color: var(--gray-700);
+  }
+  
+  .error-container {
+    color: var(--danger-color);
+  }

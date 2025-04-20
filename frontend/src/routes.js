@@ -8,7 +8,7 @@ import AuthLayout from './components/layout/AuthLayout';
 // Auth Pages
 import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
-import ForgotPasswordPage from './pages/ForgotPassword';
+import ForgotPasswordPage from './pages/ForgotPassword/ForgotPassword';
 
 // Main Pages
 import DashboardPage from './pages/Dashboard';
@@ -142,6 +142,7 @@ const routes = [
         path: 'forgot-password',
         element: (
           <GuestGuard>
+            {/* Denne bruker nå den korrekt importerte komponenten */}
             <ForgotPasswordPage />
           </GuestGuard>
         )
