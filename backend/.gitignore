@@ -1,0 +1,59 @@
+# Node.js dependencies
+/node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logging
+logs
+*.log
+
+# Testing
+/coverage
+
+# Production build
+/dist
+/build
+
+# Temporary files
+.tmp
+.temp
+*.tmp
+*.temp
+
+# OS and Editor folders
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Market data or user uploaded files
+/uploads
+/market_data
+/backtest_results
+
+# Database dumps
+/db-backup
+*.dump
+*.sql
+*.sqlite
+
+# Local Configuration
+config/local.js

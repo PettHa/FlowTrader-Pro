@@ -1,0 +1,115 @@
+.auth-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--gray-100);
+    padding: 2rem 1rem;
+  }
+  
+  .auth-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    height: min(90vh, 700px);
+  }
+  
+  .auth-sidebar {
+    width: 40%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+  
+  .brand-icon {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .brand-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .auth-features h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+  }
+  
+  .auth-features p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .feature-list li {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .feature-list li::before {
+    content: "✓";
+    font-weight: bold;
+  }
+  
+  .auth-footer {
+    margin-top: auto;
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+  
+  .auth-content {
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .auth-container {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .auth-sidebar {
+      width: 100%;
+      padding: 2rem 1.5rem;
+    }
+    
+    .auth-content {
+      padding: 2rem 1.5rem;
+    }
+    
+    .auth-features h2 {
+      font-size: 1.25rem;
+    }
+  }

@@ -1,0 +1,93 @@
+# Miljøvariabler og hemmeligheter
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+package-lock.json
+
+# Bygg-mapper
+/dist
+/build
+/out
+/.next
+
+# Testing
+/coverage
+
+# Produksjonsbyggfiler
+/frontend/build
+
+# Debugging
+/.vscode
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Log-filer
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Systemfiler
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Midlertidige filer
+*.tmp
+*.temp
+*.bak
+*.sw*
+*~
+\#*\#
+.\#*
+
+# Markedsdata og cache
+/market_data
+/cache
+
+# Backtesting-resultater (store filer)
+/backtest_results
+*.csv
+*.xlsx
+*.xls
+
+# Database-dumps
+*.dump
+*.sql
+*.sqlite
+*.db
+
+# Python virtuelle miljøer (hvis de brukes for backtesting eller analyse)
+/venv
+/.venv
+/env
+/.env
+/__pycache__
+*.py[cod]
+*$py.class
+
+# Andre prosjektspesifikke filer
+prosjekt_innhold.txt
+builder.py
