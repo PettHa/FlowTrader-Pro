@@ -1,0 +1,323 @@
+.live-trading-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  
+  .panel-tabs {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-600);
+    background: none;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .tab-btn:hover {
+    color: var(--primary-color);
+    background-color: var(--gray-50);
+  }
+  
+  .tab-btn.active {
+    color: var(--primary-color);
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  .tab-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+    font-size: 0.7rem;
+    font-weight: 600;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+  }
+  
+  .tab-btn.active .tab-count {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .live-status {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-dark);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 1rem;
+  }
+  
+  .status-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--success-color);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  .panel-summary {
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  
+  .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .summary-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: var(--gray-50);
+    border-radius: 0.375rem;
+  }
+  
+  .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.5rem;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .card-label {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+  }
+  
+  .card-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+  
+  .card-value.profit {
+    color: var(--success-color);
+  }
+  
+  .card-value.loss {
+    color: var(--danger-color);
+  }
+  
+  .panel-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .positions-list,
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .position-item,
+  .order-item {
+    border: 1px solid var(--gray-200);
+    border-radius: 0.375rem;
+    overflow: hidden;
+  }
+  
+  .position-header,
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: var(--gray-50);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  
+  .position-symbol,
+  .order-symbol {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+  }
+  
+  .position-type,
+  .order-type {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .position-type.long,
+  .detail-value.buy {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-dark);
+  }
+  
+  .position-type.short,
+  .detail-value.sell {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger-dark);
+  }
+  
+  .order-type.market {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .order-type.limit {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6; /* purple-500 */
+  }
+  
+  .position-details,
+  .order-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .detail-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .detail-label {
+    font-size: 0.7rem;
+    color: var(--gray-500);
+  }
+  
+  .detail-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-800);
+  }
+  
+  .detail-value.profit {
+    color: var(--success-color);
+  }
+  
+  .detail-value.loss {
+    color: var(--danger-color);
+  }
+  
+  .position-actions,
+  .order-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--gray-100);
+  }
+  
+  .close-position-btn,
+  .cancel-order-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--danger-color);
+    background-color: rgba(239, 68, 68, 0.1);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .close-position-btn:hover,
+  .cancel-order-btn:hover {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    gap: 0.75rem;
+    color: var(--gray-500);
+    text-align: center;
+  }
+  
+  .empty-state p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--gray-600);
+    font-weight: 500;
+  }
+  
+  .empty-note {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    max-width: 300px;
+  }
+  
+  .panel-footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--gray-200);
+    background-color: var(--gray-50);
+  }
+  
+  .strategy-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .info-label {
+    color: var(--gray-600);
+  }
+  
+  .info-value {
+    font-weight: 500;
+    color: var(--gray-800);
+  }
